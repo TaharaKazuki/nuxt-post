@@ -11,8 +11,12 @@
                   <h1>Newest Posts</h1>
                   <hr>
                 </div>
-                <post-item />
-                <post-item />
+                <post-item
+                  v-for="post in posts"
+                  :key="post._id"
+                  :title="post.title"
+                  :subtitle="post.subtitle"
+                />
               </div>
               <!-- end of post -->
             </div>
@@ -31,6 +35,23 @@ export default {
   components: {
     Navbar,
     PostItem
+  },
+  data() {
+    return {
+      title: 'My Title From page',
+      posts: [
+        {
+          _id: '1',
+          title: 'My first post',
+          subtitle: 'My first sub post'
+        },
+        {
+          _id: '2',
+          title: 'My second post',
+          subtitle: 'My second sub post'
+        },
+      ]
+    }
   }
 }
 </script>
