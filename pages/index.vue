@@ -1,42 +1,50 @@
 <template>
-  <div class="container">
-    <h1>Me Home Page</h1>
+  <div>
+    <navbar />
+    <div class="blogs-page">
+      <div class="main-content">
+        <div class="container">
+          <div class="columns is-mobile">
+            <div class="column is-8 is-offset-2">
+              <div class="section">
+                <div class="title">
+                  <h1>Newest Posts</h1>
+                  <hr>
+                </div>
+                <post-item />
+                <post-item />
+              </div>
+              <!-- end of post -->
+            </div>
+            <!-- end of side bar -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-
+import Navbar from '~/components/Navbar.vue'
+import PostItem from '~/components/PostItem.vue'
+export default {
+  components: {
+    Navbar,
+    PostItem
+  }
+}
 </script>
-
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.post-content {
+  font-style: italic;
+}
+.post {
+  margin-bottom: 20px;
+  padding: 5px;
+  border-bottom: 2px solid transparent;
+}
+.post:hover {
+  border-bottom: 2px solid #e8e8e8;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
