@@ -40,20 +40,7 @@ export default {
   data() {
     return {
       title: 'My Title From page',
-      posts: [
-        {
-          _id: '1',
-          title: 'My first post',
-          subtitle: 'My first sub post',
-          createdAt: new Date()
-        },
-        {
-          _id: '2',
-          title: 'My second post',
-          subtitle: 'My second sub post',
-          createdAt: new Date()
-        },
-      ]
+      posts: this.$store.state.posts
     }
   }
 }

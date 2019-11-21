@@ -11,8 +11,9 @@
     </div>
     <div class="post-right">
       <label class="checkbox">
-        <input type="checkbox">
-          Read
+        <input type="checkbox"
+        :checked="isRead">
+        Read
       </label>
     </div>
   </div>
@@ -39,9 +40,11 @@ export default {
       type: Date,
       required: false,
       default: new Date()
+    },
+    isRead: {
+      type: Boolean,
+      required: false
     }
-  },
-  methods: {
   }
 }
 </script>
@@ -67,6 +70,5 @@ export default {
     &:hover {
       border-bottom: 2px solid #e8e8e8;
     }
-    
   }
 </style>
