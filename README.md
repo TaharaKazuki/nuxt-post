@@ -1,4 +1,4 @@
-## nuxt-post
+## nuxt-post_
 
 > My good Nuxt.js project
 
